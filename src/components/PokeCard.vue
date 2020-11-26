@@ -59,7 +59,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="postcss">
 h1 {
   background-color: green;
   color: white;

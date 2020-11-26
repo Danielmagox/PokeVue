@@ -1,21 +1,24 @@
 <template>
   <div>
-    <PokeCard :index="1" />
-    <PokeCard :index="4" />
-    <PokeCard :index="151" />
-    <PokeCard :index="92" />
+    <input type="number" v-model="generation" />
+    <PokemonList :generation="generation" />
   </div>
 </template>
 
 <script>
 /* eslint-disable */
 
-import PokeCard from "./components/PokeCard.vue";
+import PokemonList from "./components/PokemonList.vue";
 
 export default {
   name: "App",
   components: {
-    PokeCard,
+    PokemonList,
+  },
+  data() {
+    return {
+      generation: 1,
+    };
   },
 };
 </script>
